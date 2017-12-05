@@ -1,6 +1,6 @@
 Advent of Code Input Loader
 ----
-Loads [Advent of Code](http://adventofcode.com/) the input data for a specified day and year.
+Loads [Advent of Code](http://adventofcode.com/) input data for a specified day and year.
 
 Install
 ----
