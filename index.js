@@ -7,27 +7,31 @@ const {promisify} = require('util');
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
-async function getInput(year, day, session) {
+function getInput(year, day, session = process.env.AOC_SESSION) {
+    if (session === undefined) {
+        return Promise.reject(new Error("No session provided or exist as the AOC_SESSION environment variable"));
+    }
+
     const filename = `aoc-${year}-${day}`
     const tempPath = path.join(os.tmpdir(), filename);
 
-    try {
-        const buffer = await readFile(tempPath);
-        return buffer.toString('utf8');
-    }
-    catch (e) {}
-
-    let input = await request({
-        url: `http://adventofcode.com/${year}/day/${day}/input`,
-        headers: {
-            'Cookie': `session=${session}`,
-        }
-    })
-    input = input.replace(/\n$/, "");
-
-    writeFile(tempPath, input);
-
-    return input;
+    let ret;
+    
+    return readFile(tempPath)
+        .then(buffer => buffer.toString('utf8'))
+        .catch(() => {
+            return request({
+                url: `https://adventofcode.com/${year}/day/${day}/input`,
+                headers: {
+                    'Cookie': `session=${session}`,
+                }
+            });
+        })
+        .then(input => {
+            ret = input.replace(/\n$/, "");
+            return writeFile(tempPath, ret);
+        }, () => {})
+        .then(() => ret)
 }
 
 module.exports = getInput;
