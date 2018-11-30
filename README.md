@@ -4,14 +4,16 @@ Loads [Advent of Code](http://adventofcode.com/) input data for a specified day 
 
 Install
 ----
-`npm install aoc-input-loader`
+`npm install aoc-loader`
 
 Use
 ----
 ````javascript
-const inputLoader = require('aoc-input-loader');
+const aocLoader = require('aoc-loader');
 
-inputLoader(year, day, sessionCookie).then(data => {
+aocLoader(year, day, sessionCookie).then(data => {
     console.log(data);
 });
 ````
+
+If no `sessionCookie` is provided, aoc-loander will try to get i from the `AOC_SESSION` environment variable. This is recomended the recomended way of using this package.
