@@ -12,7 +12,7 @@ function getInput(year, day, session = process.env.AOC_SESSION) {
         return Promise.reject(new Error("No session provided or exist as the AOC_SESSION environment variable"));
     }
 
-    const filename = `aoc-${year}-${day}`
+    const filename = `aoc-${year}-${day}-${session}`
     const tempPath = path.join(os.tmpdir(), filename);
 
     let ret;
