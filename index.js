@@ -3,6 +3,7 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs');
 const {promisify} = require('util');
+const crypto = require('crypto');
 
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
@@ -12,7 +13,11 @@ function getInput(year, day, session = process.env.AOC_SESSION) {
         return Promise.reject(new Error("No session provided or exist as the AOC_SESSION environment variable"));
     }
 
-    const filename = `aoc-${year}-${day}-${session}`
+    const hash = crypto.createHash('sha256');
+    hash.update(session);
+    const hashedSession = hash.digest('hex');
+
+    const filename = `aoc-${year}-${day}-${hashedSession}`;
     const tempPath = path.join(os.tmpdir(), filename);
 
     let ret;
