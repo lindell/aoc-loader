@@ -6,7 +6,7 @@ import crypto from 'crypto';
 
 const { readFile, writeFile } = promises;
 
-async function getInput(year: number, day: number, session = process.env.AOC_SESSION): Promise<string | undefined> {
+async function aocLoader(year: number, day: number, session = process.env.AOC_SESSION): Promise<string> {
     if (session === undefined) {
         throw new Error('No session provided or exist as the AOC_SESSION environment variable');
     }
@@ -33,14 +33,16 @@ async function getInput(year: number, day: number, session = process.env.AOC_SES
 
         ret = input.replace(/\n$/, '');
         await writeFile(tempPath, ret);
-    } catch (_error) {
-        // Don't do anything if it fails
+    } catch (error) {
+        throw new Error(
+            `Failed to fetch AoC data for year ${year} day ${day}${error instanceof Error ? `: ${error.message}` : ''}`,
+        );
     }
 
     return ret;
 }
 
-export default getInput;
+export default aocLoader;
 
 // For CommonJS default export support
-module.exports = getInput;
+module.exports = aocLoader;
