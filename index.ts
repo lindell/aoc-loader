@@ -8,7 +8,7 @@ const { readFile, writeFile } = promises;
 
 async function getInput(year: number, day: number, session = process.env.AOC_SESSION): Promise<string | undefined> {
     if (session === undefined) {
-        return Promise.reject(new Error('No session provided or exist as the AOC_SESSION environment variable'));
+        throw new Error('No session provided or exist as the AOC_SESSION environment variable');
     }
 
     const hash = crypto.createHash('sha256');
