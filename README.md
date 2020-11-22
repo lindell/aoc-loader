@@ -18,7 +18,7 @@ aocLoader(year, day, sessionCookie).then((data) => {
 });
 ```
 
-If no `sessionCookie` is provided, aoc-loander will try to get i from the `AOC_SESSION` environment variable. This is recomended the recomended way of using this package.
+If no `sessionCookie` is provided, aoc-loader will try to get i from the `AOC_SESSION` environment variable. This is recommended the recommended way of using this package.
 
 ## Get the session cookie
 
