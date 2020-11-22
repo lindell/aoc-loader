@@ -10,6 +10,7 @@
   "scripts": {
     "build": "tsc",
     "prepack": "npm run build",
+    "lint": "prettier -c . && eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Johan Lindell",
