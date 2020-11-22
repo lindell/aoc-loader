@@ -6,7 +6,7 @@ import crypto from 'crypto';
 
 const { readFile, writeFile } = promises;
 
-async function getInput(year: number, day: number, session = process.env.AOC_SESSION): Promise<string> {
+async function aocLoader(year: number, day: number, session = process.env.AOC_SESSION): Promise<string> {
     if (session === undefined) {
         throw new Error('No session provided or exist as the AOC_SESSION environment variable');
     }
@@ -42,7 +42,7 @@ async function getInput(year: number, day: number, session = process.env.AOC_SES
     return ret;
 }
 
-export default getInput;
+export default aocLoader;
 
 // For CommonJS default export support
-module.exports = getInput;
+module.exports = aocLoader;
