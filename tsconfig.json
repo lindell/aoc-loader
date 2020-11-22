@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "ES2016",
-        "module": "CommonJS",
-        "declaration": true,
-        "strict": true,
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "removeComments": true,
-        "outDir": "dist"
-    },
-    "include": ["*.ts"]
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "CommonJS",
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "outDir": "dist"
+  },
+  "include": ["*.ts"]
 }
