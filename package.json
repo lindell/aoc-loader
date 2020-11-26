@@ -15,6 +15,14 @@
   },
   "author": "Johan Lindell",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lindell/aoc-loader.git"
+  },
+  "homepage": "https://github.com/lindell/aoc-loader#readme",
+  "bugs": {
+    "url": "https://github.com/lindell/aoc-loader/issues"
+  },
   "dependencies": {
     "got": "^11.8.0"
   },
