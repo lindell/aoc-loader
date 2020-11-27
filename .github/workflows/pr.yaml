@@ -9,6 +9,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
         with:
-          fetch-depth: 30
+          fetch-depth: 0
       - name: Commitsar check
         uses: aevea/commitsar@v0.15.0
