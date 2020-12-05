@@ -1,5 +1,17 @@
 # Changelog
 
+### [1.4.2](https://www.github.com/lindell/aoc-loader/compare/v1.4.1...v1.4.2) (2020-12-05)
+
+
+### Miscellaneous
+
+* **deps:** pin dependencies ([#24](https://www.github.com/lindell/aoc-loader/issues/24)) ([6ff4aef](https://www.github.com/lindell/aoc-loader/commit/6ff4aefe0ab181cd805594b1905b55fad469490e))
+* **deps:** update actions/checkout action to v2 ([#15](https://www.github.com/lindell/aoc-loader/issues/15)) ([1ae0a0d](https://www.github.com/lindell/aoc-loader/commit/1ae0a0d062100b9ce4fd187dde41d7771ddb72ef))
+* **deps:** update dependency eslint to v7.15.0 ([#23](https://www.github.com/lindell/aoc-loader/issues/23)) ([eaf7851](https://www.github.com/lindell/aoc-loader/commit/eaf7851a27606e84254250a09ecad85bb3e59731))
+* **deps:** update dependency prettier to v2.2.1 ([#18](https://www.github.com/lindell/aoc-loader/issues/18)) ([7b7b6f4](https://www.github.com/lindell/aoc-loader/commit/7b7b6f497e3a9c946d45f68a15f587283f83d91c))
+* **deps:** update googlecloudplatform/release-please-action action to v2.10.1 ([#20](https://www.github.com/lindell/aoc-loader/issues/20)) ([662dc56](https://www.github.com/lindell/aoc-loader/commit/662dc56dc272b7fc90b397f9c5d97b6be6de53c3))
+* **deps:** update typescript-eslint monorepo to v4.9.0 ([#19](https://www.github.com/lindell/aoc-loader/issues/19)) ([6c7a6a4](https://www.github.com/lindell/aoc-loader/commit/6c7a6a4fc70bb871fc833fe66f906df383a45a4f))
+
 ### [1.4.1](https://www.github.com/lindell/aoc-loader/compare/v1.4.0...v1.4.1) (2020-11-26)
 
 
