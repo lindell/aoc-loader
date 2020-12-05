@@ -1,5 +1,4 @@
 import got from 'got';
-import crypto from 'crypto';
 import { promises } from 'fs';
 import { mocked } from 'ts-jest/utils';
 import aocLoader from '.';
@@ -75,29 +74,17 @@ describe('aocLoader', () => {
     });
 
     it('should write to cache file if request is successful and cache does not exist', async () => {
-        const sessionToken = 'session-token';
+        await expect(aocLoader(2020, 1, 'session-token')).resolves.toEqual('Input from web');
 
-        await aocLoader(2020, 1, sessionToken);
-
-        const hash = crypto.createHash('sha256');
-        hash.update(sessionToken);
-        const hashedSession = hash.digest('hex');
-
-        expect(writeFileMock).toHaveBeenCalledWith(`/tmp/aoc-2020-1-${hashedSession}`, 'Input from web');
+        expect(writeFileMock).toHaveBeenCalledWith(expect.anything(), 'Input from web');
     });
 
     it('should read cache file if it exist and not request input anew', async () => {
         readFileMock.mockResolvedValueOnce(Buffer.from('Input from file', 'utf8'));
 
-        const sessionToken = 'session-token';
+        await expect(aocLoader(2019, 5, 'session-token')).resolves.toEqual('Input from file');
 
-        await expect(aocLoader(2019, 5, sessionToken)).resolves.toEqual('Input from file');
-
-        const hash = crypto.createHash('sha256');
-        hash.update(sessionToken);
-        const hashedSession = hash.digest('hex');
-
-        expect(readFileMock).toHaveBeenCalledWith(`/tmp/aoc-2019-5-${hashedSession}`);
+        expect(readFileMock).toHaveBeenCalled();
         expect(gotMock).not.toHaveBeenCalled();
     });
 
