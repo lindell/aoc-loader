@@ -22,14 +22,14 @@ async function aocLoader(year: number, day: number, session = process.env.AOC_SE
     try {
         const input = await readFile(tempPath)
             .then((buffer) => buffer.toString('utf8'))
-            .catch(() => {
-                return got(`https://adventofcode.com/${year}/day/${day}/input`, {
+            .catch(() =>
+                got(`https://adventofcode.com/${year}/day/${day}/input`, {
                     headers: {
                         Cookie: `session=${session}`,
                     },
                     resolveBodyOnly: true,
-                });
-            });
+                }),
+            );
 
         ret = input.replace(/\n$/, '');
         await writeFile(tempPath, ret);
