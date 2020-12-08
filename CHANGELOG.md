@@ -1,5 +1,19 @@
 # Changelog
 
+### [1.4.3](https://www.github.com/lindell/aoc-loader/compare/v1.4.2...v1.4.3) (2020-12-08)
+
+
+### Bug Fixes
+
+* **ci:** fixed double building in release action ([#27](https://www.github.com/lindell/aoc-loader/issues/27)) ([96c1aec](https://www.github.com/lindell/aoc-loader/commit/96c1aec18c76710bd47f3d38260234baaf5fd6c4))
+
+
+### Miscellaneous
+
+* **deps:** update dependency eslint-config-prettier to v7 ([#29](https://www.github.com/lindell/aoc-loader/issues/29)) ([26bbd47](https://www.github.com/lindell/aoc-loader/commit/26bbd473b1f755be5020d8eaa1431b5a42f559c2))
+* **deps:** update googlecloudplatform/release-please-action action to v2.11.5 ([#30](https://www.github.com/lindell/aoc-loader/issues/30)) ([6717d30](https://www.github.com/lindell/aoc-loader/commit/6717d304572d2fcbef351ffc918870061255ba1b))
+* **deps:** update typescript-eslint monorepo to v4.9.1 ([#31](https://www.github.com/lindell/aoc-loader/issues/31)) ([2ac37e6](https://www.github.com/lindell/aoc-loader/commit/2ac37e60df05d4d47d72e4adce7e149c7a078920))
+
 ### [1.4.2](https://www.github.com/lindell/aoc-loader/compare/v1.4.1...v1.4.2) (2020-12-05)
 
 
