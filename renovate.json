@@ -3,10 +3,10 @@
     "config:base",
     "schedule:quarterly",
     ":dependencyDashboard",
-    ":unpublishSafe",
     ":prNotPending",
     ":automergeBranch",
     ":automergeLinters",
     ":automergeTesters"
-  ]
+  ],
+  "stabilityDays": 3
 }
