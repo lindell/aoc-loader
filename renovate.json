@@ -7,6 +7,5 @@
     ":automergeBranch",
     ":automergeLinters",
     ":automergeTesters"
-  ],
-  "stabilityDays": 3
+  ]
 }
