@@ -15,7 +15,6 @@ module.exports = {
         'plugin:import/typescript',
         'plugin:jest/recommended',
         'prettier',
-        'prettier/@typescript-eslint',
     ],
     rules: {
         'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.spec.ts'] }],
@@ -23,6 +22,13 @@ module.exports = {
             'error',
             {
                 ts: 'never',
+            },
+        ],
+        'import/no-import-module-exports': [
+            'error',
+            {
+                // The main export of a package should automatically be excepted, but it is pointing to the built version.
+                exceptions: ['**/index.ts'],
             },
         ],
     },
