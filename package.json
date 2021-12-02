@@ -1,6 +1,6 @@
 {
   "name": "aoc-loader",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Loads input data from Advent of Code",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
