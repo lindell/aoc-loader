@@ -10,5 +10,5 @@
     "removeComments": true,
     "outDir": "dist"
   },
-  "include": ["*.ts"]
+  "include": ["index.ts"]
 }
