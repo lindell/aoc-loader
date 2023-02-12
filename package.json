@@ -24,7 +24,7 @@
     "url": "https://github.com/lindell/aoc-loader/issues"
   },
   "dependencies": {
-    "got": "^11.8.0"
+    "got": "^12.5.3"
   },
   "devDependencies": {
     "@types/jest": "27.5.1",
