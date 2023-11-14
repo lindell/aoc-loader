@@ -1,5 +1,20 @@
 # Changelog
 
+### [1.4.5](https://www.github.com/lindell/aoc-loader/compare/v1.4.4...v1.4.5) (2023-11-14)
+
+
+### Miscellaneous
+
+* **deps:** update actions/checkout action to v4 ([#112](https://www.github.com/lindell/aoc-loader/issues/112)) ([6de78af](https://www.github.com/lindell/aoc-loader/commit/6de78afca0eb5c7fc6edc93c65e6b0b0661b26b5))
+* **deps:** update actions/setup-node action to v4 ([#113](https://www.github.com/lindell/aoc-loader/issues/113)) ([6324029](https://www.github.com/lindell/aoc-loader/commit/6324029bc1a5a00c4671e2c8fdcba75fbc90f8db))
+* **deps:** update dependency eslint to v8.8.0 ([#89](https://www.github.com/lindell/aoc-loader/issues/89)) ([f33ad70](https://www.github.com/lindell/aoc-loader/commit/f33ad708dbb1b15c1142325678a8c1921aec4caa))
+* **deps:** update dependency eslint-plugin-jest to v25.7.0 ([#86](https://www.github.com/lindell/aoc-loader/issues/86)) ([a5d3190](https://www.github.com/lindell/aoc-loader/commit/a5d3190ebb825c23a4b3766a1fb2d253daa4caac))
+* **deps:** update dependency ts-jest to v27.1.4 ([#90](https://www.github.com/lindell/aoc-loader/issues/90)) ([9d35fd3](https://www.github.com/lindell/aoc-loader/commit/9d35fd32ca95aae8c366a8b47cedcf80947eee90))
+* **deps:** update jest monorepo ([#91](https://www.github.com/lindell/aoc-loader/issues/91)) ([e092653](https://www.github.com/lindell/aoc-loader/commit/e0926535cd2f0a0c8d68295cfc9dc4178b1a1665))
+* **deps:** update typescript-eslint monorepo to v5.11.0 ([#70](https://www.github.com/lindell/aoc-loader/issues/70)) ([1148517](https://www.github.com/lindell/aoc-loader/commit/1148517a0869be2898678d170ed378337e631f6b))
+* stop building and publishing test in package ([#84](https://www.github.com/lindell/aoc-loader/issues/84)) ([1e9c92c](https://www.github.com/lindell/aoc-loader/commit/1e9c92c148de4be1513f2d747418188c19b2a9a7))
+* use node.js v20 ([#114](https://www.github.com/lindell/aoc-loader/issues/114)) ([495e1bf](https://www.github.com/lindell/aoc-loader/commit/495e1bfa798ab483ae9e5b79c67867ee8d8a1228))
+
 ### [1.4.4](https://www.github.com/lindell/aoc-loader/compare/v1.4.3...v1.4.4) (2021-12-02)
 
 
